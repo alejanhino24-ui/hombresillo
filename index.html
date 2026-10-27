@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Actividades interactivas de matemáticas, razonamiento y resolución de problemas.">
+    <title>Matemáticas en acción | Retos y soluciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="cabecera-contenido">
+            <p class="etiqueta">MATEMÁTICAS · LÓGICA · RAZONAMIENTO</p>
+            <h1>El arte de resolver problemas</h1>
+            <p class="subtitulo">Explora desafíos matemáticos y descubre la lógica detrás de cada solución.</p>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <nav class="menu clearfix" aria-label="Seleccionar ejercicio">
+            <button type="button" class="menu-btn activo"
+                onclick="seleccionarEjercicio('sec-camellos', this)">01 · Camellos</button>
+            <button type="button" class="menu-btn"
+                onclick="seleccionarEjercicio('sec-vasijas', this)">02 · Vasijas</button>
+            <button type="button" class="menu-btn"
+                onclick="seleccionarEjercicio('sec-cuadratica', this)">03 · Ecuación</button>
+            <button type="button" class="menu-btn"
+                onclick="seleccionarEjercicio('sec-pi', this)">04 · Número π</button>
+        </nav>
+
+        <section id="sec-camellos" class="seccion-ejercicio card activo-card">
+            <p class="numero-ejercicio">RETO 01</p>
+            <h2>El reparto de los camellos</h2>
+            <p>Explora cómo una cantidad adicional puede facilitar un reparto basado en fracciones.</p>
+
+            <form id="formCamellos">
+                <label for="totalCamellos">Cantidad inicial de camellos</label>
+                <input type="number" id="totalCamellos" value="35" min="1" step="1" required>
+                <button type="submit" class="btn-accion">Resolver el reparto</button>
+            </form>
+            <div id="resultadoCamellos" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="sec-vasijas" class="seccion-ejercicio card">
+            <p class="numero-ejercicio">RETO 02</p>
+            <h2>La distribución de las vasijas</h2>
+            <p>Introduce una cantidad divisible entre tres para estudiar su distribución.</p>
+
+            <form id="formVasijas">
+                <label for="totalVasijas">Cantidad total de vasijas</label>
+                <input type="number" id="totalVasijas" value="21" min="3" step="3" required>
+                <button type="submit" class="btn-accion">Calcular distribución</button>
+            </form>
+            <div id="resultadoVasijas" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="sec-cuadratica" class="seccion-ejercicio card">
+            <p class="numero-ejercicio">RETO 03</p>
+            <h2>Ecuaciones de segundo grado</h2>
+            <p>Calcula las raíces reales de la ecuación ax² + bx + c = 0.</p>
+
+            <form id="formQuad">
+                <div class="campo">
+                    <label for="valA">Coeficiente a</label>
+                    <input type="number" id="valA" step="any" required>
+                </div>
+                <div class="campo">
+                    <label for="valB">Coeficiente b</label>
+                    <input type="number" id="valB" step="any" required>
+                </div>
+                <div class="campo">
+                    <label for="valC">Coeficiente c</label>
+                    <input type="number" id="valC" step="any" required>
+                </div>
+                <button type="submit" class="btn-accion">Calcular raíces</button>
+            </form>
+            <div id="resultado12" class="resultado" aria-live="polite"></div>
+        </section>
+
+        <section id="sec-pi" class="seccion-ejercicio card">
+            <p class="numero-ejercicio">RETO 04</p>
+            <h2>Una aproximación al número π</h2>
+            <p>Observa cómo cambia la aproximación al aumentar las iteraciones del cálculo.</p>
+
+            <form id="formPi">
+                <label for="valN">Número de iteraciones</label>
+                <input type="number" id="valN" min="1" max="1000000" value="1000" step="1" required>
+                <button type="submit" class="btn-accion">Estimar π</button>
+            </form>
+            <div id="resultado13" class="resultado" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="pie-contenido">
+            <p class="pie-titulo">Pensar, calcular y descubrir.</p>
+            <p>Un espacio para aprender matemáticas mediante la práctica.</p>
+            <p class="pie-creditos">Proyecto educativo · Matemáticas interactivas · 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/calculos.js"></script>
+</body>
+</html>
